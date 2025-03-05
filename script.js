@@ -69,9 +69,6 @@
         })
         .catch(error => console.error('Chyba při načítání dat:', error));
     }
-    
-
-
 
   function updateTotalToGpuText(data) {
     const lastEarning = data[data.length - 1]; 
@@ -111,10 +108,6 @@
     const dateString = date.toLocaleDateString('cs-CZ', { month: '2-digit', day: '2-digit' });
     return `${dateString}`;
   }
-
-  // FUNCTION TO UPDATE TOTAL EARNINGS TEXT
-
-
   //BUTTON TO LOAD WALLET DATA
   function FetchIndividualUser(){
   document.getElementById('getDataBtn').addEventListener('click', function() {
@@ -142,12 +135,7 @@
           alert('Please input your wallet address');
       }
   });
-
-
   }
-
-
-
 
   async function getOgpuPrice() {
           const response = await fetch('https://flask-api-project-x879.onrender.com/get_ogpu_price');
@@ -160,10 +148,6 @@
               document.getElementById('ogpu-price').innerText = 'N/A';
           }
   }
-
-
-
-
   function toggleAnswer(questionElement) {
     const answer = questionElement.nextElementSibling;
     
@@ -174,111 +158,6 @@
     }
   }
 
-
-
-
-  function createBarChart() {        
-    const ctx = document.getElementById('bar-gpustats').getContext('2d');
-    myGPUChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: [],
-            datasets: [{
-                label: 'Amount',
-                data: [],
-                backgroundColor: '#00b894',
-                borderColor: 'rgba(0, 184, 147, 0.13)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-          responsive: false,
-          scales: {
-              x: {
-                  type: 'category',  
-                  ticks: {
-                      font: {
-                          size: window.innerWidth < 768 ? 10 : 14 
-                      },color: 'white' ,
-                      maxRotation: 90,
-                      minRotation: 90
-                  },
-                  title: {
-                  }
-              },
-              y: {
-                  ticks: {
-                      font: {
-                          size: window.innerWidth < 768 ? 10 : 14
-                      }
-                  },
-                  title: {
-                    display: true,
-                    text: 'TOP 20 (AMOUNT) OF GPUs',
-                    font: {
-                      size: 16,
-                      weight: 'bold'
-                    }}
-              }
-          }
-      }
-    });
-  }
-
-function createDonutChart() {        
-    const ctx = document.getElementById('donut-gpustats').getContext('2d');
-    myDonutChart = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: [],
-            datasets: [{
-                label: 'GPU types',
-                data: [],
-                backgroundColor: [
-                  'rgba(116, 185, 56, 1)',
-                   'rgba(153, 102, 255, 0.8)',   
-                    'rgba(255, 255, 255, 0.8)',   
-                   'rgba(255, 99, 132, 0.8)'  
-                ],
-                hoverBackgroundColor: ['rgba(99, 255, 132, 0.8)'
-                    , 'rgba(158, 90, 173, 1)'
-                    , 
-                    'rgb(255, 255, 255)', 
-                    'rgba(237, 28, 36, 1)'  
-                ],
-                borderColor: 'rgba(0, 0, 0, 0.2)', 
-                borderWidth: 2,
-                hoverOffset: 8 
-            }]
-        },
-        options: {
-            responsive: true, 
-            cutout: '65%',
-            plugins: {
-                legend: {
-                    position: 'bottom',
-                    labels: {
-                        color: '#ddd',    
-                        font: {
-                            size: 14
-                        }
-                    }
-                },title: {
-                  display: true,
-                  text: 'GPU Brand Distribution in oGPU Network',
-                  font: {
-                    size: 16,
-                    weight: 'bold'
-                  }}
-                
-            }
-        }
-    });
-}
-
-
-
-
 function run()
 {
   getOgpuPrice();
@@ -288,22 +167,9 @@ function run()
     FetchIndividualUser()
 
   }
-  if(window.location.pathname.endsWith('gpu.html')){
-    createBarChart();
-    createDonutChart();
-    FetchDataGPU();
-    FetchDataGPUManufacturer()
-    fetchDataAllUsers();
-
-  }
 }
-
-
-
   // CALL FOR FETCHING DATA + CHART
   window.onload = function() 
   {
       run()
   };
-  /*GPUSTATS SITE */ 
-

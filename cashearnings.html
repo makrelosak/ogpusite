@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>oGPU - Cash Earnings</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="logo">
+      <div id="ogpu-price-label" style="color:white">oGPU Price: </div>
+      <div id="ogpu-price">oGPU</div>
+  </div>
+  
+    <nav class="nav-links">
+      <a href="cashearnings.html" class="nav-button" id="active">CASH EARNINGS</a>
+  </nav>
+    <div class="user-info">
+      <span class="made-by">Made by @makrelosak</span>
+    </div>
+  </header>
+
+  
+
+  <main class="earnings-container">
+    <h1 class="title">CASH EARNINGS</span></h1>
+
+    <div class="total-mined-container">
+      <div class="total-mined">
+        <h2>TOTAL $ToGPU</h2>
+        <p id='total_togpu' class="mined-amount">- </p> <span>$ToGPU</span>
+        <!--<span class="last-updated" id="last-updated">Last updated: -</span>-->
+      </div>
+      <canvas id="myChart-cashearnings"></canvas> 
+    </div>
+
+    <!-- FORM  -->
+    <div class="wallet-info">
+      <h2>Check Wallet Earnings</h2>
+      <input type="text" id="walletAddress" placeholder="Enter Wallet Address">
+      <button id="getDataBtn">Get Earnings</button>
+
+      <div id="result">
+        <div class="result-box">
+            <div class="result-title">$ToGPU </div>
+            <div class="result-value" id="earnings">-</div>
+            <div>$ToGPU</div>
+        </div>
+        <div class="result-box">
+            <div class="result-title">Cash earnings</div>
+            <div class="result-value" id="cashEarnings-ogpu">-</div>
+            <div>$oGPU</div>
+        </div>
+        <div class="result-box">
+            <div class="result-title">Last updated</div>
+            <div class="result-value" id="time">-</div>
+        </div>
+    </div>
+    
+    </div>
+
+<!-- FAQ -->
+<div class="faq-container">
+  <h2>Frequently Asked Questions</h2>
+  
+  <div class="faq">
+    <div class="faq-question" onclick="toggleAnswer(this)">What is ToGPU?</div>
+    <div class="faq-answer">
+        <strong>ToGPU in provider app:</strong> <br>These act as leaderboard points and determine the percentage of the 100,000 $oGPU airdrop you are eligible for.<br><br>
+        <strong>ToGPU from faucet:</strong>  <br>These tokens are used for competitions and testing of our products on the testnet. Visit the <a href="https://opengpu.network/faucet">Faucet site</a> for more information.<br>
+    </div>
+</div>
+<div class="faq">
+  <div class="faq-question" onclick="toggleAnswer(this)">What are PoS earnings and GPU earnings?</div>
+  <div class="faq-answer">
+      <strong>PoS earnings:</strong> You earn these  simply by keeping the app open and running.<br><br>
+      <strong>GPU earnings:</strong> You accumulate these  by running projects in the projects tab and completing requests. The amount of $ToGPU earned per completed requests can be found in the "Price" column.
+  </div>
+</div>
+  <div class="faq">
+      <div class="faq-question" onclick="toggleAnswer(this)">Can I withdraw my earnings?</div>
+      <div class="faq-answer">Your cash earnings ($oGPU) will be airdropped to your wallet once the mainnet is launched.</div>
+  </div>
+  
+  <div class="faq">
+      <div class="faq-question" onclick="toggleAnswer(this)">How are cash earnings calculated?</div>
+      <div class="faq-answer"><strong>The formula for calculating your earnings is:</strong>
+        (Your $ToGPU / Total $ToGPU) * 100,000<br><br>
+        <strong>Example:<br></strong>
+        If you have 10 $ToGPU in "Total earnings" within your provider app, and the total $ToGPU is 10,000, your cash earnings would be calculated as follows:
+        (10 / 10,000) * 100,000 = 100 $oGPU</div>
+  </div>
+  <div class="faq">
+    <div class="faq-question" onclick="toggleAnswer(this)">Why are my cash earnings decreasing? </div>
+    <div class="faq-answer">
+      If your cash earnings ($oGPU) are decreasing, it’s because the 100,000 $oGPU airdrop is shared based on the amount of 
+      $ToGPU earned. As more users join, the total amount is divided among more people, resulting in a smaller share for each.<br><br>
+
+  </div>
+</div>
+  
+
+  
+  <div class="faq">
+      <div class="faq-question" onclick="toggleAnswer(this)">How often is the data on this site updated?</div>
+      <div class="faq-answer">Approximatly every 15-30 minutes.</div>
+  </div>
+</div>
+  </main>
+  <h5 STYLE="text-align: center;">THIS IS NOT AN OFFICIAL SITE OF OGPU, IT'S A COMMUNITY MADE SITE</h5>
+
+  <script src="script.js"></script> 
+</body>
+</html>

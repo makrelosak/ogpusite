@@ -1,0 +1,442 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #141414;
+  color: #ddd;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h3{
+  margin:0.2em;
+}
+
+#ogpu-price{
+  color:rgb(0, 184, 148)
+}
+
+header {
+  background-color: #1a1a1a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.logo h2 {
+  margin: 0;
+}
+.logo {
+  display: flex;
+  align-items: center; 
+  gap: 0.5rem; 
+}
+
+#ogpu-price-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+#ogpu-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00b894;
+}
+.nav-links {
+  display: flex;
+  gap: 15px; }
+
+.nav-button {
+  text-decoration: none;
+  background: linear-gradient(135deg, #2c2c2c, #1a1a1a); 
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: inline-block;
+}
+
+.nav-button:hover {
+  background: linear-gradient(135deg, #444, #222); 
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px #00b894; 
+}
+
+.made-by {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+
+.earnings-container {
+  padding: 50px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.total-mined-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  text-align: center;
+}
+
+.total-mined {
+  background-color: #222;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.mined-amount {
+  font-size: 36px;
+  font-weight: bold;
+  color: #00b894;
+  background-color: #333;
+  padding: 2px;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.mined-amount span {
+  font-size: 1.2em;
+  font-weight: normal;
+  color: #fff;
+}
+
+.last-updated {
+  color: #888;
+  margin-top: 10px;
+}
+
+#time {
+  font-size: 15px;
+}
+
+.wallet-info {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.wallet-info input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.wallet-info button {
+  padding: 10px 20px;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wallet-info button:hover {
+  background-color: #00a676;
+}
+
+#result {
+  display: block;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.result-box {
+  background-color: #2e2e2e;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result-box p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.result-box .result-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00b894;
+  margin-bottom: 10px;
+}
+
+.result-box .result-value {
+  font-size: 22px;
+  color: #ddd;
+  font-weight: bold;
+}
+
+.result-box .result-value.positive {
+  color: #00ff00;
+}
+
+#earnings, #time, #change {
+  font-weight: bold;
+}
+
+.earnings-change {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #16a085;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.earnings-change .percentage {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.earnings-change .arrow-up {
+  font-size: 20px;
+  color: #00ff00;
+  margin-left: 5px;
+}
+
+.faq-container {
+  margin-top: 50px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: white;
+}
+
+.faq-container h2 {
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.faq {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.faq:hover {
+  background-color: #444;
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #00a676;
+}
+
+.faq-answer {
+  display: none;
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.faq-answer a {
+  color: #00b894;
+  text-decoration: none;
+}
+
+.faq-answer a:hover {
+  text-decoration: underline;
+}
+
+#myChart-cashearnings {
+  width: 100% !important;
+  max-width: 700px;
+  height: 300px;
+  max-height: 400px;
+  margin: 0 auto;
+}
+
+#myChart-gpustats {
+  width: 100%;
+  height: 400px;
+}
+
+
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #myChart-cashearnings {
+      max-width: 100%;
+      height: 250px;
+  }
+  .user-info{
+    margin-top:10px;
+    color:gray;
+  }
+
+
+
+  .total-mined-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .total-mined {
+      width: 90%;
+  }
+
+  .mined-amount {
+      font-size: 20px;
+  }
+
+  .wallet-info input {
+      width: 80%;
+      font-size: 14px;
+  }
+
+  .wallet-info button {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+
+  .result-box {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  #result {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .earnings-container {
+      padding: 30px;
+      margin: 15px;
+  }
+
+  .title {
+      font-size: 28px;
+  }
+
+  .faq-container h2 {
+      font-size: 24px;
+  }
+
+  .faq-question {
+      font-size: 16px;
+  }
+
+  .faq-answer {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  header {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .earnings-container {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .total-mined-container {
+    flex-direction: column;
+    gap: 2rem; 
+  }
+
+  .total-mined {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .mined-amount {
+    font-size: 1.2rem;
+    padding: 0.3rem 0rem;
+  }
+
+  #bar-gpustats, #donut-gpustats {
+    height: 15rem;
+  }
+
+  .nav-links div {
+    font-size: 0.9rem;
+  }
+
+
+
+}
